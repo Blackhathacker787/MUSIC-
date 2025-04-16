@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Creator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #091b26, #123049, #1b4d72);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+    }
+
+    .content {
+      max-width: 50%;
+      animation: slideInLeft 1.5s ease;
+    }
+
+    .content h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: #0ff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .social-links {
+      margin-top: 50px;
+      display: flex;
+      gap: 15px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .social-links a img {
+      width: 35px;
+      height: 35px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      filter: drop-shadow(0 0 5px #0ff);
+    }
+
+    .social-links a img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    .image-container {
+      max-width: 40%;
+      animation: slideInRight 1.5s ease;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 50%;
+      border: 4px solid #0ff;
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .content, .image-container {
+        max-width: 100%;
+      }
+
+      .image-container {
+        margin-top: 20px;
+      }
+
+      .social-links {
+        left: auto;
+        transform: none;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Shaik Salam</h1>
+    <p>I'm a game developer passionate about building engaging and innovative gaming experiences. I love coding gameplay mechanics, exploring AI in games, and pushing creative boundaries to bring virtual worlds to life.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/mr_eccedentesiast_5/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/shaik-salam-2626a0353" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/Blackhathacker787" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+  <div class="image-container">
+    <img src="https://i.imgur.com/3P9jgbb.jpeg" alt="Shaik Salam">
+  </div>
+</body>
+</html>

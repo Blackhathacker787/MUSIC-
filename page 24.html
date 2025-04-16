@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultra Styled Web Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: #fff;
+      overflow-x: hidden;
+      animation: fadeInBody 2s ease-in;
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      backdrop-filter: blur(3px);
+    }
+
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      animation: fadeInLeft 2s ease;
+    }
+
+    .image-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: zoomIn 1.5s ease;
+    }
+
+    .image-box img {
+      width: 20%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .image-box:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+
+    .image-text {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      width: 65%;
+      animation: slideUp 1.5s ease, glowText 2s infinite alternate;
+    }
+
+    .image-text::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      animation: pulseBorder 2s infinite;
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInBody {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes glowText {
+      0% {
+        text-shadow: 0 0 5px #fff;
+      }
+      100% {
+        text-shadow: 0 0 15px #fff, 0 0 30px #0ff;
+      }
+    }
+
+    @keyframes pulseBorder {
+      0% {
+        opacity: 0.2;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0.6;
+        transform: scale(1.05);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <video autoplay loop muted class="background-video">
+    <source src="https://videos.pexels.com/video-files/4451498/4451498-hd_1920_1080_24fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <div class="image-column">
+      <div class="image-box">
+        <img src="https://images.pexels.com/photos/1327430/pexels-photo-1327430.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 1">
+        <div class="image-text">Drums are percussion instruments that produce sound through the vibration of a stretched membrane or shell. They are a fundamental part of music, providing the rhythmic backbone and driving force for countless genres. From ancient times, drums have been used in various cultures for communication, rituals, and entertainment.</div>
+      </div>
+      <div class="image-box">
+        <img src="https://images.pexels.com/photos/237464/pexels-photo-237464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 2">
+        <div class="image-text">Drum kits are a collection of drums and cymbals designed to be played by one person. A typical drum kit includes a bass drum, snare drum, tom-toms, hi-hat cymbals, ride cymbal, and crash cymbal. Both acoustic and electric drum kits are popular, with electric kits offering the advantage of quieter practice and digital sounds.</div>
+      </div>
+      <div class="image-box">
+        <img src="https://images.pexels.com/photos/876713/pexels-photo-876713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 3">
+        <div class="image-text">Beyond their musical function, drums have held significant cultural and religious importance throughout history. In many societies, they have been associated with magic, power, and communication. The rhythmic pulse of the drums can evoke a sense of community, excitement, and even spiritual connection.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      console.log("Page Loaded with Animated Content.");
+    });
+  </script>
+</body>
+</html>

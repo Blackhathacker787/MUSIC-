@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultra Styled Web Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: #fff;
+      overflow-x: hidden;
+      animation: fadeInBody 2s ease-in;
+      background-color: #000;
+    }
+
+    /* Background Video */
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 100vh;
+      padding: 40px;
+      gap: 20px;
+    }
+
+    .image-column {
+      position: relative;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInLeft 2s ease-in-out;
+    }
+
+    .image-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      width: 80%;
+      height: 80%;
+    }
+
+    .image-box img {
+      width: 70%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .image-box:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+
+    .content-box {
+      position: relative;
+      width: 45%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+      animation: fadeInRight 2s ease-in-out;
+    }
+
+    .image-text {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 15px;
+      width: 100%;
+      animation: slideUp 1.5s ease;
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInBody {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .image-column,
+      .content-box {
+        width: 100%;
+      }
+
+      .image-box img {
+        max-width: 100%;
+      }
+
+      .image-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay loop muted class="background-video">
+    <source src="https://videos.pexels.com/video-files/853767/853767-hd_1920_1080_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <!-- First Image and Content Box -->
+    <div class="image-column">
+      <div class="image-box">
+        <img src="https://images.pexels.com/photos/7095506/pexels-photo-7095506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 1">
+      </div>
+    </div>
+    <div class="content-box">
+      <div class="image-text">
+        <p>The violin is the smallest and highest pitched string instrument typically used in western music.[3] A person who plays the violin is called a violinist. 
+
+      </div>
+    </div>
+
+    <!-- Second Image and Content Box -->
+    <div class="image-column">
+      <div class="image-box">
+        <img src="https://images.pexels.com/photos/306175/pexels-photo-306175.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 2">
+      </div>
+    </div>
+    <div class="content-box">
+      <div class="image-text">
+        <p>The violin is important in European and Arabian music. No other instrument has played such an important part in Europe. The modern violin is about 400 years old. Similar string instruments have been around for almost 1000 years.
+          By the time the modern orchestras started to form in the 17th century, the violin was nearly fully developed. It became the most important orchestral instrument - in fact, nearly half of the instruments in the orchestra is made up of violins, which are divided into two parts: 
+          "first violins" and "second violins". Nearly every composer wrote for the violin, whether as a solo instrument, in chamber music, in orchestral music, folk music, and even 
+      </div>
+    </div>
+
+    <!-- Third Image and Content Box -->
+    <div class="image-column">
+      <div class="image-box">
+        <img src="https://images.pexels.com/photos/697672/pexels-photo-697672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image 3">
+      </div>
+    </div>
+    <div class="content-box">
+      <div class="image-text">
+        <p>The word “violin” and the word “viol” come from the same word.[4] The violin was not made directly from the instruments called viols. The word violin comes from the Middle Latin word vitula. It means stringed instrument.[5] This word is also believed to be the source of the Germanic “fiddle”.
+          The modern European violin changed over time from many different bowed stringed instruments. They were brought from the Middle East[7] and the Byzantine Empire.[8][9] Most likely, the first makers of violins took ideas from three kinds of current instruments. They are the rebec, in use since the 10th century,[10] the Renaissance fiddle, and the lira da braccio.
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      console.log("Page Loaded with Animated Content.");
+    });
+  </script>
+</body>
+</html>
